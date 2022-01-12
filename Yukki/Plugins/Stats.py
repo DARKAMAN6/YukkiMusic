@@ -27,7 +27,7 @@ from Yukki.Plugins import ALL_MODULES
 from Yukki.Utilities.ping import get_readable_time
 
 __MODULE__ = "Stats"
-__HELP__ = """
+__CMD__ = """
 
 
 /stats
