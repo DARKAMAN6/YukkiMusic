@@ -17,7 +17,7 @@ from Yukki.Database import (add_gban_user, add_off, add_on, add_sudo,
                             set_video_limit)
 
 __MODULE__ = "SudoUsers"
-__HELP__ = """
+__CMD__ = """
 
 
 /sudolist 
