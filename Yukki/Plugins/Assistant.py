@@ -12,7 +12,7 @@ from Yukki.Database import get_assistant, save_assistant
 from Yukki.Utilities.assistant import get_assistant_details
 
 __MODULE__ = "Assistant"
-__HELP__ = f"""
+__CMD__ = f"""
 
 
 /checkassistant
