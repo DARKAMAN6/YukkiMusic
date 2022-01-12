@@ -9,7 +9,7 @@ from youtubesearchpython import VideosSearch
 from Yukki import MUSIC_BOT_NAME, app
 
 __MODULE__ = "Lyrics"
-__HELP__ = """
+__CMD__ = """
 
 /Lyrics [Music Name]
 - Searches Lyrics for the particular Music on web.
