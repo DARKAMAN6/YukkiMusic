@@ -19,7 +19,7 @@ user_time = {}
 flex = {}
 
 __MODULE__ = "Global Ban"
-__HELP__ = """
+__CMD__ = """
 
 **Note:**
 Only for Sudo Users.
