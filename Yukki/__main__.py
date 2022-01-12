@@ -68,8 +68,8 @@ async def initiate_bot():
             ):
                 imported_module.__MODULE__ = imported_module.__MODULE__
                 if (
-                    hasattr(imported_module, "__HELP__")
-                    and imported_module.__HELP__
+                    hasattr(imported_module, "__CMD__")
+                    and imported_module.__CMD__
                 ):
                     HELPABLE[
                         imported_module.__MODULE__.lower()
@@ -82,12 +82,12 @@ async def initiate_bot():
             status="[bold blue]Importation Completed!",
         )
     console.print(
-        "[bold green]Congrats!! Yukki Music Bot has started successfully!\n"
+        "[bold green]Congrats!! Yukki Music Bot has amaned successfully!\n"
     )
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "<b>Congrats!! Music Bot has started successfully!</b>",
+            "<b>Congrats!! Music Bot has amaned successfully!</b>",
         )
     except Exception as e:
         print(
@@ -106,7 +106,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_1.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 1  has started successfully!</b>",
+                "<b>Congrats!! Assistant Client 1  has amaned successfully!</b>",
             )
         except Exception as e:
             print(
@@ -125,7 +125,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_2.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 2 has started successfully!</b>",
+                "<b>Congrats!! Assistant Client 2 has amaned successfully!</b>",
             )
         except Exception as e:
             print(
@@ -144,7 +144,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_3.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 3 has started successfully!</b>",
+                "<b>Congrats!! Assistant Client 3 has amaned successfully!</b>",
             )
         except Exception as e:
             print(
@@ -163,7 +163,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_4.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 4 has started successfully!</b>",
+                "<b>Congrats!! Assistant Client 4 has amaned successfully!</b>",
             )
         except Exception as e:
             print(
@@ -182,7 +182,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_5.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 5 has started successfully!</b>",
+                "<b>Congrats!! Assistant Client 5 has amaned successfully!</b>",
             )
         except Exception as e:
             print(
@@ -201,7 +201,7 @@ async def initiate_bot():
         try:
             await LOG_CLIENT.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Logger Client has started successfully!</b>",
+                "<b>Congrats!! Logger Client has amaned successfully!</b>",
             )
         except Exception as e:
             print(
@@ -210,21 +210,21 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await LOG_CLIENT.join_chat("OfficialYukki")
-            await LOG_CLIENT.join_chat("YukkiSupport")
+            await LOG_CLIENT.join_chat("DARKAMANCHANNEL")
+            await LOG_CLIENT.join_chat("DARKAMANSUPPORT")
         except:
             pass
     console.print(f"└[red] Yukki Music Bot Boot Completed.")
     if STRING1 != "None":
-        await pytgcalls1.start()
+        await pytgcalls1.aman()
     if STRING2 != "None":
-        await pytgcalls2.start()
+        await pytgcalls2.aman()
     if STRING3 != "None":
-        await pytgcalls3.start()
+        await pytgcalls3.aman()
     if STRING4 != "None":
-        await pytgcalls4.start()
+        await pytgcalls4.aman()
     if STRING5 != "None":
-        await pytgcalls5.start()
+        await pytgcalls5.aman()
     await idle()
     console.print(f"\n[red]Stopping Bot")
 
@@ -236,14 +236,14 @@ A Telegram Music+Video Streaming bot with some useful features.
 All commands can be used with: / """
 
 
-@app.on_message(filters.command("help") & filters.private)
-async def help_command(_, message):
-    text, keyboard = await help_parser(message.from_user.mention)
+@app.on_message(filters.command("cmd") & filters.private)
+async def cmd_command(_, message):
+    text, keyboard = await cmd_parser(message.from_user.mention)
     await app.send_message(message.chat.id, text, reply_markup=keyboard)
 
 
-@app.on_message(filters.command("start") & filters.private)
-async def start_command(_, message):
+@app.on_message(filters.command("aman") & filters.private)
+async def aman_command(_, message):
     if len(message.text.split()) > 1:
         name = (message.text.split(None, 1)[1]).lower()
         if name[0] == "s":
@@ -287,10 +287,10 @@ async def start_command(_, message):
                 umention = f"[{sender_name}](tg://user?id={int(sender_id)})"
                 return await LOG_CLIENT.send_message(
                     LOG_GROUP_ID,
-                    f"{message.from_user.mention} has just started bot to check <code>SUDOLIST</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+                    f"{message.from_user.mention} has just amaned bot to check <code>SUDOLIST</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
                 )
-        if name == "help":
-            text, keyboard = await help_parser(message.from_user.mention)
+        if name == "cmd":
+            text, keyboard = await cmd_parser(message.from_user.mention)
             await message.delete()
             return await app.send_text(
                 message.chat.id,
@@ -350,7 +350,7 @@ async def start_command(_, message):
                 umention = f"[{sender_name}](tg://user?id={int(sender_id)})"
                 return await LOG_CLIENT.send_message(
                     LOG_GROUP_ID,
-                    f"{message.from_user.mention} has just started bot to check <code>VIDEO INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+                    f"{message.from_user.mention} has just amaned bot to check <code>VIDEO INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
                 )
             return
     out = private_panel()
@@ -364,14 +364,14 @@ async def start_command(_, message):
         umention = f"[{sender_name}](tg://user?id={int(sender_id)})"
         return await LOG_CLIENT.send_message(
             LOG_GROUP_ID,
-            f"{message.from_user.mention} has just started Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+            f"{message.from_user.mention} has just amaned Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
         )
     return
 
 
-async def help_parser(name, keyboard=None):
+async def cmd_parser(name, keyboard=None):
     if not keyboard:
-        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
+        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "cmd"))
     return (
         """Hello {first_name},
 
@@ -387,18 +387,18 @@ All commands can be used with: /
 
 @app.on_callback_query(filters.regex("shikhar"))
 async def shikhar(_, CallbackQuery):
-    text, keyboard = await help_parser(CallbackQuery.from_user.mention)
+    text, keyboard = await cmd_parser(CallbackQuery.from_user.mention)
     await CallbackQuery.message.edit(text, reply_markup=keyboard)
 
 
-@app.on_callback_query(filters.regex(r"help_(.*?)"))
-async def help_button(client, query):
-    home_match = re.match(r"help_home\((.+?)\)", query.data)
-    mod_match = re.match(r"help_module\((.+?)\)", query.data)
-    prev_match = re.match(r"help_prev\((.+?)\)", query.data)
-    next_match = re.match(r"help_next\((.+?)\)", query.data)
-    back_match = re.match(r"help_back", query.data)
-    create_match = re.match(r"help_create", query.data)
+@app.on_callback_query(filters.regex(r"cmd_(.*?)"))
+async def cmd_button(client, query):
+    home_match = re.match(r"cmd_home\((.+?)\)", query.data)
+    mod_match = re.match(r"cmd_module\((.+?)\)", query.data)
+    prev_match = re.match(r"cmd_prev\((.+?)\)", query.data)
+    next_match = re.match(r"cmd_next\((.+?)\)", query.data)
+    back_match = re.match(r"cmd_back", query.data)
+    create_match = re.match(r"cmd_create", query.data)
     top_text = f"""Hello {query.from_user.first_name},
 
 Click on the buttons for more information.
@@ -409,7 +409,7 @@ All commands can be used with: /
         module = mod_match.group(1)
         text = (
             "{} **{}**:\n".format(
-                "Here is the help for", HELPABLE[module].__MODULE__
+                "Here is the cmd for", HELPABLE[module].__MODULE__
             )
             + HELPABLE[module].__HELP__
         )
@@ -417,7 +417,7 @@ All commands can be used with: /
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Back", callback_data="help_back"
+                        text="↪️ Back", callback_data="cmd_back"
                     ),
                     InlineKeyboardButton(
                         text="🔄 Close", callback_data="close"
@@ -444,7 +444,7 @@ All commands can be used with: /
         await query.message.edit(
             text=top_text,
             reply_markup=InlineKeyboardMarkup(
-                paginate_modules(curr_page - 1, HELPABLE, "help")
+                paginate_modules(curr_page - 1, HELPABLE, "cmd")
             ),
             disable_web_page_preview=True,
         )
@@ -454,7 +454,7 @@ All commands can be used with: /
         await query.message.edit(
             text=top_text,
             reply_markup=InlineKeyboardMarkup(
-                paginate_modules(next_page + 1, HELPABLE, "help")
+                paginate_modules(next_page + 1, HELPABLE, "cmd")
             ),
             disable_web_page_preview=True,
         )
@@ -463,13 +463,13 @@ All commands can be used with: /
         await query.message.edit(
             text=top_text,
             reply_markup=InlineKeyboardMarkup(
-                paginate_modules(0, HELPABLE, "help")
+                paginate_modules(0, HELPABLE, "cmd")
             ),
             disable_web_page_preview=True,
         )
 
     elif create_match:
-        text, keyboard = await help_parser(query)
+        text, keyboard = await cmd_parser(query)
         await query.message.edit(
             text=text,
             reply_markup=keyboard,
