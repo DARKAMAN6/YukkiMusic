@@ -33,7 +33,7 @@ from Yukki.Utilities.youtube import (get_m3u8, get_yt_info_id,
 loop = asyncio.get_event_loop()
 
 __MODULE__ = "VideoCalls"
-__HELP__ = f"""
+__CMD__ = f"""
 
 /play [Reply to any Video] or [YT Link] or [Music Name]
 - Stream Video on Voice Chat
