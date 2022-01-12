@@ -9,7 +9,7 @@ from Yukki import BOT_ID, SUDOERS, app
 from Yukki.Utilities.formatters import bytes
 
 __MODULE__ = "Speedtest"
-__HELP__ = """
+__CMD__ = """
 
 /speedtest 
 - Check Server Latency and Speed.
