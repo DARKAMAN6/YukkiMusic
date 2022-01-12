@@ -19,7 +19,7 @@ from Yukki.Utilities.assistant import get_assistant_details
 loop = asyncio.get_event_loop()
 
 __MODULE__ = "Join/Leave"
-__HELP__ = """
+__CMD__ = """
 
 **Note:**
 Only for Sudo Users
