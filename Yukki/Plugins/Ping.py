@@ -10,7 +10,7 @@ from Yukki import BOT_USERNAME, MUSIC_BOT_NAME, app, boottime
 from Yukki.Utilities.ping import get_readable_time
 
 __MODULE__ = "Ping"
-__HELP__ = """
+__CMD__ = """
 
 /ping - Check if Bot is alive or not.
 """
