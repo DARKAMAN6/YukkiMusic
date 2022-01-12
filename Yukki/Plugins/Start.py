@@ -28,14 +28,14 @@ from Yukki.Utilities.ping import get_readable_time
 welcome_group = 2
 
 __MODULE__ = "Essentials"
-__HELP__ = """
+__CMD__ = """
 
 
-/start 
+/cmd
 - Start the Bot.
 
 
-/help 
+/cmd
 - Get Commands Helper Menu.
 
 
@@ -94,7 +94,7 @@ async def welcome(_, message: Message):
             return
 
 
-@app.on_message(filters.command(["help", "start"]) & filters.group)
+@app.on_message(filters.command(["CMD", "CMD"]) & filters.group)
 @PermissionCheck
 async def useradd(_, message: Message):
     out = start_pannel()
