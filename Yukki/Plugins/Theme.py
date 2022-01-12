@@ -30,7 +30,7 @@ themes2 = [
 ]
 
 __MODULE__ = "Theme"
-__HELP__ = """
+__CMD__ = """
 
 
 /settheme
