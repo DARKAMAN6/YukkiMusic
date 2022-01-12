@@ -33,7 +33,7 @@ loop = asyncio.get_event_loop()
 
 
 __MODULE__ = "Voice Chat"
-__HELP__ = """
+__CMD__ = """
 
 
 /pause
