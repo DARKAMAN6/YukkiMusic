@@ -26,7 +26,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 __MODULE__ = "Server"
-__HELP__ = f"""
+__CMD__ = f"""
 
 **Note:**
 **Only for Sudo Users**
