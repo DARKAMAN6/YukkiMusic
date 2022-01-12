@@ -5,7 +5,7 @@ from Yukki import SUDOERS, app
 from Yukki.Database import blacklist_chat, blacklisted_chats, whitelist_chat
 
 __MODULE__ = "Blacklist"
-__HELP__ = """
+__CMD__ = """
 
 
 /blacklistedchat 
