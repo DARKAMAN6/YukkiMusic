@@ -11,7 +11,7 @@ from rich.table import Table
 from youtubesearchpython import VideosSearch
 
 from config import (LOG_GROUP_ID, LOG_SESSION, STRING1, STRING2, STRING3,
-                    STRING4, STRING5)
+                    STRING4, STRING5, AMAN_IMG)
 from Yukki import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    ASSID1, ASSID2, ASSID3, ASSID4, ASSID5, ASSNAME1, ASSNAME2,
                    ASSNAME3, ASSNAME4, ASSNAME5, BOT_ID, BOT_NAME, LOG_CLIENT,
@@ -399,9 +399,9 @@ async def help_button(client, query):
     next_match = re.match(r"help_next\((.+?)\)", query.data)
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
-    top_text = f"""Hello {query.from_user.first_name},
+    top_text = f"""[{AMAN_IMG}]Hello {query.from_user.first_name},
 
-Click on the buttons for more information.
+[Click]() on the buttons for more information.
 
 All commands can be used with: /
  """
@@ -417,10 +417,10 @@ All commands can be used with: /
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Back", callback_data="help_back"
+                        text="😂😂😂", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
-                        text="🔄 Close", callback_data="close"
+                        text="🔥🔥🔥🔥", callback_data="close"
                     ),
                 ],
             ]
