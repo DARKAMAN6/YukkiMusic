@@ -8,13 +8,7 @@ from pyrogram.types import Message
 from Yukki import BOT_ID, SUDOERS, app
 from Yukki.Utilities.formatters import bytes
 
-__MODULE__ = "Speedtest"
-__CMD__ = """
 
-/speedtest 
-- Check Server Latency and Speed.
-
-"""
 
 
 @app.on_message(filters.command("speedtest") & ~filters.edited)
