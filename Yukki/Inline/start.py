@@ -5,6 +5,185 @@ from config import MUSIC_BOT_NAME, SUPPORT_CHANNEL, SUPPORT_GROUP
 from Yukki import BOT_USERNAME
 
 
+def setting_markup2():
+    buttons = [
+        [
+            InlineKeyboardButton(text="🔈 Audio Quality", callback_data="AQ"),
+            InlineKeyboardButton(text="🎚 Audio Volume", callback_data="AV"),
+        ],
+        [
+            InlineKeyboardButton(
+                text="👥 Authorized Users", callback_data="AU"
+            ),
+            InlineKeyboardButton(
+                text="💻 Dashboard", callback_data="Dashboard"
+            ),
+        ],
+        [
+            InlineKeyboardButton(text="✖️ Close", callback_data="close"),
+        ],
+    ]
+    return f"🔧  **{MUSIC_BOT_NAME} Settings**", buttons
+
+
+def start_pannel():
+    if not SUPPORT_CHANNEL and not SUPPORT_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="🔧 Settings", callback_data="settingm"
+                )
+            ],
+        ]
+        return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
+    if not SUPPORT_CHANNEL and SUPPORT_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="🔧 Settings", callback_data="settingm"
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                ),
+            ],
+        ]
+        return f"🎛  **This is {MUSIC_BOT_NAME}*", buttons
+    if SUPPORT_CHANNEL and not SUPPORT_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="🔧 Settings", callback_data="settingm"
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                ),
+            ],
+        ]
+        return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
+    if SUPPORT_CHANNEL and SUPPORT_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="🔧 Settings", callback_data="settingm"
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                ),
+                InlineKeyboardButton(
+                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                ),
+            ],
+        ]
+        return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
+
+
+def private_panel():
+    if not SUPPORT_CHANNEL and not SUPPORT_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    "➕ Add me to your Group",
+                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                )
+            ],
+        ]
+        return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
+    if not SUPPORT_CHANNEL and SUPPORT_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    "➕ Add me to your Group",
+                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                ),
+            ],
+        ]
+        return f"🎛  **This is {MUSIC_BOT_NAME}*", buttons
+    if SUPPORT_CHANNEL and not SUPPORT_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    "➕ Add me to your Group",
+                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                ),
+            ],
+        ]
+        return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
+    if SUPPORT_CHANNEL and SUPPORT_GROUP:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    "➕ Add me to your Group",
+                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                ),
+                InlineKeyboardButton(
+                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                ),
+            ],
+        ]
+        return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
+
+
 def setting_markup():
     buttons = [
         [
