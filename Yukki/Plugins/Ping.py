@@ -25,8 +25,8 @@ Disk: {disk}%"""
     return stats
 
 
-@app.on_message(filters.command(["ping", f"ping@{BOT_USERNAME}"]))
-async def ping(_, message):
+@app.on_message(filters.command(["amanhubhaiya", f"amanhubhaiya@{BOT_USERNAME}"]))
+async def amanhubhaiya(_, message):
     start = datetime.now()
     response = await message.reply_photo(
         photo="Utils/Query.jpg",
