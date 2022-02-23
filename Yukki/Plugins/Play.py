@@ -61,7 +61,7 @@ async def play(_, message: Message):
     url = get_url(message)
     if audio:
         mystic = await message.reply_text(
-            "🔄 Processing Audio... Please Wait!"
+            "💫𝐀𝐋𝐄𝐗𝐀 𝐎𝐍 𝐅𝐈𝐑𝐄💫"
         )
         try:
             read = db_mem[message.chat.id]["live_check"]
