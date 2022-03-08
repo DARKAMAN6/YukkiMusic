@@ -42,7 +42,7 @@ async def bot_sys_stats():
     return stats
 
 
-@app.on_message(filters.command("aman") & ~filters.edited)
+@app.on_message(filters.command("amanop") & ~filters.edited)
 async def aman(_, message):
     start = datetime.now()
     try:
